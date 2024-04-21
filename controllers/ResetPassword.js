@@ -29,12 +29,14 @@ exports.resetPasswordToken = async (req, res) => {
                                         {new:true});
 
         //create url
-        const url = `http://localhost:3000/update-password/${token}`
+        const url = `https://studynotion-chadhuvukundam.onrender.com//${token}`
 
         //send mail containing the url
-        await mailSender(email, 
-                        "Password Reset Link",
-                        `Password Reset Link: ${url}`);
+        await mailSender(
+			email,
+			"Password Reset",
+			`Your Link for Resetting the Password is <a href="${url}">Password Reset Link </a>. Please click this URL to reset your password.`
+		);
 
         //return response
         return res.json({

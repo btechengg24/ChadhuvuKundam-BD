@@ -75,7 +75,7 @@ exports.contactUsEmail = (
     <body>
         <div class="container">
             <a href="https://studynotion-chadhuvukundam.onrender.com/"><img class="logo"
-                    src="https://i.ibb.co/7Xyj3PC/logo.png" alt="StudyNotion Logo"></a>
+                    src="https://github.com/btechengg24/StudyNotion-ChadhuvuKundam-BD/blob/master/mail/templates/logo.png" alt="StudyNotion Logo"></a>
             <div class="message">Contact Form Confirmation</div>
             <div class="body">
                 <p>Dear ${firstname} ${lastname},</p>

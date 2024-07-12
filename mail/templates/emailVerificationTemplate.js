@@ -66,19 +66,19 @@ const otpTemplate = (otp) => {
 	
 	<body>
 		<div class="container">
-			<a href="https://studynotion-chadhuvukundam.onrender.com/"><img class="logo"
-					src="https://github.com/btechengg24/StudyNotion-ChadhuvuKundam-BD/blob/master/mail/templates/logo.png" alt="StudyNotion Logo"></a>
+			<a href="https://chadhuvu-kundam.onrender.com/"><img class="logo"
+                    src="https://github.com/btechengg24/ChadhuvuKundam-BD/blob/master/mail/templates/logo.png" alt="Logo"></a>
 			<div class="message">OTP Verification Email</div>
 			<div class="body">
 				<p>Dear User,</p>
-				<p>Thank you for registering with StudyNotion-ChadhuvuKundam. To complete your registration, please use the following OTP
+				<p>Thank you for registering with Chadhuvu Kundam. To complete your registration, please use the following OTP
 					(One-Time Password) to verify your account:</p>
 				<h2 class="highlight">${otp}</h2>
 				<p>This OTP is valid for 5 minutes. If you did not request this verification, please disregard this email.
 				Once your account is verified, you will have access to our platform and its features.</p>
 			</div>
 			<div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
-					href="mailto:mailbystudynotion@gmail.com">mailbystudynotion@gmail.com</a>. We are here to help!</div>
+					href="mailto:mailbychadhuvukundam@gmail.com">mailbychadhuvukundam@gmail.com</a>. We are here to help!</div>
 		</div>
 	</body>
 	

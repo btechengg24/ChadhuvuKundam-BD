@@ -67,8 +67,8 @@ exports.courseEnrollmentEmail = (courseName, name) => {
     
     <body>
         <div class="container">
-            <a href="https://studynotion-chadhuvukundam.onrender.com/"><img class="logo" src="https://github.com/btechengg24/StudyNotion-ChadhuvuKundam-BD/blob/master/mail/templates/logo.png"
-                    alt="StudyNotion Logo"></a>
+            <a href="https://chadhuvu-kundam.onrender.com/"><img class="logo"
+                    src="https://github.com/btechengg24/ChadhuvuKundam-BD/blob/master/mail/templates/logo.png" alt="Logo"></a>
             <div class="message">Course Registration Confirmation</div>
             <div class="body">
                 <p>Dear ${name},</p>
@@ -76,10 +76,10 @@ exports.courseEnrollmentEmail = (courseName, name) => {
                     are excited to have you as a participant!</p>
                 <p>Please log in to your learning dashboard to access the course materials and start your learning journey.
                 </p>
-                <a class="cta" href="https://studynotion-chadhuvukundam.onrender.com/dashboard">Go to Dashboard</a>
+                <a class="cta" href="https://chadhuvu-kundam.onrender.com/dashboard">Go to Dashboard</a>
             </div>
             <div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
-                    href="mailto:mailbystudynotion@gmail.com">mailbystudynotion@gmail.com</a>. We are here to help!</div>
+                    href="mailto:mailbychadhuvukundam@gmail.com">mailbychadhuvukundam@gmail.com</a>. We are here to help!</div>
         </div>
     </body>
     

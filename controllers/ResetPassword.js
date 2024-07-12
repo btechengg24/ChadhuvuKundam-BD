@@ -29,7 +29,7 @@ exports.resetPasswordToken = async (req, res) => {
                                         {new:true});
 
         //create url
-        const url = `https://studynotion-chadhuvukundam.onrender.com/${token}`
+        const url = `https://chadhuvu-kundam.onrender.com/${token}`
 
         //send mail containing the url
         await mailSender(

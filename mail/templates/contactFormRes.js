@@ -1,12 +1,12 @@
 exports.contactUsEmail = (
-    email,
-    firstname,
-    lastname,
-    message,
-    phoneNo,
-    countrycode
-  ) => {
-    return `<!DOCTYPE html>
+	email,
+	firstname,
+	lastname,
+	message,
+	phoneNo,
+	countrycode
+) => {
+	return `<!DOCTYPE html>
     <html>
     
     <head>
@@ -74,8 +74,8 @@ exports.contactUsEmail = (
     
     <body>
         <div class="container">
-            <a href="https://studynotion-chadhuvukundam.onrender.com/"><img class="logo"
-                    src="https://github.com/btechengg24/StudyNotion-ChadhuvuKundam-BD/blob/master/mail/templates/logo.png" alt="StudyNotion Logo"></a>
+            <a href="https://chadhuvu-kundam.onrender.com/"><img class="logo"
+                    src="https://github.com/btechengg24/ChadhuvuKundam-BD/blob/master/mail/templates/logo.png" alt="Logo"></a>
             <div class="message">Contact Form Confirmation</div>
             <div class="body">
                 <p>Dear ${firstname} ${lastname},</p>
@@ -89,9 +89,9 @@ exports.contactUsEmail = (
                 <p>We appreciate your interest and will get back to you shortly. </p>
             </div>
             <div class="support">If you have any further questions or need immediate assistance, please feel free to reach
-                out to us at <a href="mailto:mailbystudynotion@gmail.com">mailbystudynotion@gmail.com</a>. We are here to help!</div>
+                out to us at <a href="mailto:mailbychadhuvukundam@gmail.com">mailbychadhuvukundam@gmail.com</a>. We are here to help!</div>
         </div>
     </body>
     
-    </html>`
-  }
+    </html>`;
+};

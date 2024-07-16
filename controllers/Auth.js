@@ -3,14 +3,16 @@ const User = require("../models/User");
 const OTP = require("../models/OTP");
 const jwt = require("jsonwebtoken");
 const otpGenerator = require("otp-generator");
-const mailSender = require("../utils/mailSender");
-const { passwordUpdated } = require("../mail/templates/passwordUpdate");
+
 const Profile = require("../models/Profile");
-require("dotenv").config();
+
+const mailSender = require("../utils/mailSender");
 const emailTemplate = require("../mail/templates/emailVerificationTemplate");
+const { passwordUpdated } = require("../mail/templates/passwordUpdate");
+
+require("dotenv").config();
 
 // Signup Controller for Registering USers
-
 exports.signup = async (req, res) => {
 	try {
 		// Destructure fields from the request body
@@ -61,6 +63,7 @@ exports.signup = async (req, res) => {
 		// Find the most recent OTP for the email
 		const response = await OTP.find({ email }).sort({ createdAt: -1 }).limit(1);
 		console.log(response);
+
 		if (response?.length === 0) {
 			// OTP not found for the email
 			return res.status(400).json({
@@ -208,10 +211,12 @@ exports.sendotp = async (req, res) => {
 			lowerCaseAlphabets: false,
 			specialChars: false,
 		});
+
 		const result = await OTP?.findOne({ otp: otp });
-		console.log("Result is Generate OTP Func");
+
 		console.log("OTP", otp);
 		console.log("Result", result);
+
 		while (result) {
 			otp = otpGenerator.generate(6, {
 				upperCaseAlphabets: false,
@@ -220,6 +225,7 @@ exports.sendotp = async (req, res) => {
 		const otpPayload = { email, otp };
 		const otpBody = await OTP.create(otpPayload);
 		console.log("OTP Body", otpBody);
+
 		try {
 			const mailResponse = await mailSender(
 				email,
@@ -227,7 +233,7 @@ exports.sendotp = async (req, res) => {
 				emailTemplate(otp)
 			);
 			console.log("Email sent successfully: ", mailResponse?.response);
-			console.log("mail repose 2 ", mailResponse);
+			console.log("mail reponse ", mailResponse);
 		} catch (error) {
 			console.log("Error occurred while sending email: ", error);
 			throw error;

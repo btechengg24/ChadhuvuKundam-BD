@@ -2,6 +2,7 @@ const User = require("../models/User");
 const mailSender = require("../utils/mailSender");
 const bcrypt = require("bcrypt");
 const crypto = require("crypto");
+require("dotenv").config();
 
 //resetPasswordToken
 exports.resetPasswordToken = async (req, res) => {
@@ -33,7 +34,7 @@ exports.resetPasswordToken = async (req, res) => {
 		);
 
 		//create url
-		const url = `https://chadhuvu-kundam.onrender.com/update-password/${token}`;
+		const url = `${process.env.FRONT_END_URL}/${token}`;
 
 		//send mail containing the url
 		await mailSender(

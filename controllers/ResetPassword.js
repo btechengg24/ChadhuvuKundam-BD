@@ -33,7 +33,7 @@ exports.resetPasswordToken = async (req, res) => {
 		);
 
 		//create url
-		const url = `https://chadhuvu-kundam.onrender.com/${token}`;
+		const url = `https://chadhuvu-kundam.onrender.com/update-password/${token}`;
 
 		//send mail containing the url
 		await mailSender(
